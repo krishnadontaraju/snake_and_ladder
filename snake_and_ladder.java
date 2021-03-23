@@ -1,3 +1,6 @@
+
+import java.util.random;
+
 public class snake_and_ladder {
 
 	public static void main(String args[]) {
@@ -7,8 +10,8 @@ public class snake_and_ladder {
 		String[] storer={"One" ,"Two", "Three" ,"Four","Five","Six"};
         	Random dice = new Random();
 
-		int displayer = dice.nextInt(6);
-        	System.out.println(storer[displayer]);
+		int roll = dice.nextInt(6);
+        	System.out.println(storer[roll]);
 
 
 
