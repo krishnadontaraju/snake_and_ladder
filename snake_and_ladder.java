@@ -7,6 +7,7 @@ public class snake_and_ladder {
 	public static void main(String args[]) {
 
 		int position = 0;
+		int dice_counter =0;
 		//storing the words in an array to print them later
 		String[] storer={"One" ,"Two", "Three" ,"Four","Five","Six"};
         	Random dice = new Random();
@@ -29,7 +30,8 @@ public class snake_and_ladder {
                 		case 0:
                     			System.out.println("No play");
                     			System.out.println(position);
-                    		                
+					//Counting every turn taken in every case
+                    		        dice_counter += 1;
                     		break;
         
                 		case 1:
@@ -38,15 +40,18 @@ public class snake_and_ladder {
                     				System.out.println("Ladder");
                     				position += roll;
                         			System.out.println(position);
+						dice_counter += 1;
                        				break;
 					}
-					else
+					else{
+						dice_counter += 1;
 						break;
-                    		                    		    
+                    		            }
                 		case 2:
                     			System.out.println("Snake");
                     			position = position - roll;
                     			System.out.println(position);
+					dice_counter += 1;
                     		break;
 
                 		default :
@@ -55,7 +60,8 @@ public class snake_and_ladder {
 
 			}
 		}
-
+		//Printing the number of turns taken
+		System.out.println("dice_counter");
 
 	}
 
