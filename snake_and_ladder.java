@@ -33,10 +33,15 @@ public class snake_and_ladder {
                     		break;
         
                 		case 1:
-                    			System.out.println("Ladder");
-                    			position += roll;
-                        		System.out.println(position);
-                       		break;
+				//checking if the present roll will give exact 100 or les if not break and do again until perfect 100 is reached
+					if (( position + roll) <= 100 ){
+                    				System.out.println("Ladder");
+                    				position += roll;
+                        			System.out.println(position);
+                       				break;
+					}
+					else
+						break;
                     		                    		    
                 		case 2:
                     			System.out.println("Snake");
